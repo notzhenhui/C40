@@ -40,6 +40,7 @@ class Game {
 
     fuels = new Group();
     powerCoins = new Group();
+    obstacles=new Group()
 
     var obstaclesPositions = [
       { x: width / 2 + 250, y: height - 800, image: obstacle2Image },
@@ -61,9 +62,10 @@ class Game {
 
     // Adding coin sprite in the game
     this.addSprites(powerCoins, 18, powerCoinImage, 0.09);
+    this.addSprites(obstacles,obstaclesPositions.length,obstacles1Image,0.04,obstaclesPosition)
   }
 
-  addSprites(spriteGroup, numberOfSprites, spriteImage, scale) {
+  addSprites(spriteGroup, numberOfSprites, spriteImage, scale,positions=[]) {
     for (var i = 0; i < numberOfSprites; i++) {
       var x, y;
 
